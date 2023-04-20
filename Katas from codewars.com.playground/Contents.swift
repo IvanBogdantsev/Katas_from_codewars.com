@@ -57,11 +57,11 @@ func zeros(_ n: UInt32) -> UInt32 {
  Xray should not have a dash within.
  Every word and punctuation mark should be seperated by a space ' '.
  There should be no trailing whitespace
- 
+ */
  func toNato(_ words: String) -> String {
  return words.map { natoAlphabet[$0.uppercased()] == nil ? String($0) : natoAlphabet[$0.uppercased()]! }.filter { $0 != " " }.joined(separator: " ")
  }
- */
+ 
 /*
  In this kata you have to correctly return who is the "survivor", ie: the last element of a Josephus permutation.
  
@@ -419,3 +419,7 @@ func countArare(_ n: Int) -> String {
 func rgb(_ red: Int, _ green: Int, _ blue: Int) -> String {
   return [red, green, blue].map { min(max($0, 0), 255) }.map { String(format: "%02X", $0) }.joined()
 }
+
+var dict: [Int : Int] = [1 : 1]
+dict[1] = 0
+dict[1]
